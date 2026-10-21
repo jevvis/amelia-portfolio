@@ -1145,27 +1145,25 @@ export function EducationSection() {
 
                 {/* Photo Column inside the SAME single card */}
                 <div className="w-full lg:w-5/12 flex">
-                  <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[260px] rounded-2xl overflow-hidden shadow-md border border-[var(--card-border)] bg-[var(--background)] group">
+                  <div className="relative w-full aspect-[4/5] sm:aspect-[4/3] lg:aspect-auto lg:h-full min-h-[260px] rounded-2xl overflow-hidden shadow-md border border-[var(--card-border)] bg-[var(--background)] group">
                     <img
                       src={edu.image}
                       alt={edu.program}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
 
-                    {/* University badge top-left */}
-                    <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white text-xs font-semibold shadow-lg font-sans">
-                      <img src="/projects/untad-logo.png" alt={edu.institution} className="w-5 h-5 object-contain" />
-                      <span>{edu.institution}</span>
-                    </div>
-
-                    {/* Period pill top-right */}
-                    <div className="absolute top-4 right-4 inline-flex items-center px-3 py-1.5 rounded-full bg-emerald-500/90 backdrop-blur-md text-white text-[11px] font-sans font-bold shadow-lg">
-                      {edu.period}
-                    </div>
-
-                    {/* Bottom caption */}
+                    {/* Bottom: badges + caption, kept below the face */}
                     <div className="absolute bottom-5 left-5 right-5 text-white">
+                      <div className="flex flex-wrap items-center gap-2 mb-3">
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white text-xs font-semibold shadow-lg font-sans">
+                          <img src="/projects/untad-logo.png" alt={edu.institution} className="w-4 h-4 object-contain" />
+                          <span>{edu.institution}</span>
+                        </div>
+                        <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-emerald-500/90 backdrop-blur-md text-white text-[11px] font-sans font-bold shadow-lg">
+                          {edu.period}
+                        </div>
+                      </div>
                       <span className="text-[10px] uppercase font-sans tracking-widest text-emerald-400 font-semibold block mb-1">
                         {edu.imageTag}
                       </span>

@@ -69,7 +69,7 @@ export default function Hero() {
           onMouseMove={handleMouseMove}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className="relative w-[340px] sm:w-[440px] md:w-[560px] lg:w-[680px] xl:w-[760px] max-w-[92vw] cursor-pointer perspective-[1200px] select-none"
+          className="relative w-[92vw] sm:w-[420px] md:w-[460px] lg:w-[500px] xl:w-[540px] cursor-pointer perspective-[1200px] select-none"
         >
           {/* Ambient Aura / Glow Backdrop */}
           <div
