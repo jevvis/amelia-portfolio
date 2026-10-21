@@ -2,8 +2,8 @@ import Navbar from '@/components/Navbar'
 import Contact from '@/components/Contact'
 
 export const metadata = {
-  title: 'Kontak | apt. Hafizah Nurfadillah, S.Farm',
-  description: 'Hubungi apt. Hafizah Nurfadillah, S.Farm — Licensed Pharmacist',
+  title: 'Kontak | apt. Amelia Putri Bidul, S.Farm',
+  description: 'Hubungi apt. Amelia Putri Bidul, S.Farm — Licensed Pharmacist',
 }
 
 export default function ContactPage() {
@@ -19,7 +19,7 @@ export default function ContactPage() {
       {/* Footer */}
       <footer className="py-8 px-4 text-center border-t border-[var(--card-border)]">
         <p className="text-[var(--muted)] text-sm">
-          © {new Date().getFullYear()} apt. Hafizah Nurfadillah, S.Farm. All rights reserved.
+          © {new Date().getFullYear()} apt. Amelia Putri Bidul, S.Farm. All rights reserved.
         </p>
       </footer>
     </main>

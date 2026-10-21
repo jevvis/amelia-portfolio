@@ -16,7 +16,7 @@ const oswald = Oswald({
 export const metadata: Metadata = {
   title: 'apt. Amelia Putri Bidul, S.Farm | Portfolio Clinical & Hospital Pharmacist',
   description: 'Licensed Pharmacist | Clinical & Hospital Pharmacy | Patient-Centered Care — Universitas Tadulako',
-  keywords: ['Amelia Putri Bidul', 'Apoteker', 'Farmasi Klinis', 'Clinical Pharmacist', 'Universitas Tadulako', 'RSUD Undata', 'Patient Safety', 'Kimia Farma', 'Dispensing', 'CPOB', 'CDOB'],
+  keywords: ['Amelia Putri Bidul', 'Apoteker', 'Farmasi Klinis', 'Clinical Pharmacist', 'Universitas Tadulako', 'RSUD Undata', 'Patient Safety', 'Kimia Farma', 'Dispensing', 'PIO', 'Pemantauan Terapi Obat'],
   openGraph: {
     title: 'apt. Amelia Putri Bidul, S.Farm | Portfolio Clinical & Hospital Pharmacist',
     description: 'Licensed Pharmacist | Clinical & Hospital Pharmacy | Patient Safety First',

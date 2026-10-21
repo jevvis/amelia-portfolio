@@ -3,12 +3,6 @@ import { useState, useRef, useEffect } from 'react'
 import TypewriterTitle from './TypewriterTitle'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-const certifications = [
-  { title: 'Gold Medal (Environmental Science) — GYIIF 2025', event: 'IYSA', year: '2025' },
-  { title: 'Gold Medal (Engineering Category) — ISPC 2025', event: 'IYSA', year: '2025' },
-  { title: 'Microsoft Office Desktop Application Competency', event: 'Trust Training Partners', year: '2026' },
-]
-
 export function ExcelLogo({ className = 'w-7 h-7' }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -487,11 +481,9 @@ const techIcons = [
   { id: 'udd', name: 'Distribusi Obat Unit Daily Dose (UDD)', icon: <UddLogo className="w-7 h-7" /> },
   { id: 'fefo', name: 'Pengelolaan & Penyimpanan FEFO', icon: <FefoLogo className="w-7 h-7" /> },
   { id: 'cppt', name: 'Catatan Perkembangan Pasien Terintegrasi (CPPT)', icon: <CpptLogo className="w-7 h-7" /> },
-  { id: 'cpob', name: 'Standar Industri Farmasi CPOB', icon: <GmpLogo className="w-7 h-7" /> },
-  { id: 'cdob', name: 'Standar Distribusi Gudang PBF CDOB', icon: <CdobLogo className="w-7 h-7" /> },
-  { id: 'qc', name: 'Quality Control (QC Pengujian Mutu)', icon: <QcLogo className="w-7 h-7" /> },
-  { id: 'ipc', name: 'In-Process Control (IPC)', icon: <IpcLogo className="w-7 h-7" /> },
-  { id: 'simrs', name: 'Sistem Informasi Rumah Sakit (SIMRS / EHR)', icon: <EhrSimrsLogo className="w-7 h-7" /> },
+  { id: 'word', name: 'Microsoft Word', icon: <WordLogo className="w-7 h-7" /> },
+  { id: 'excel', name: 'Microsoft Excel', icon: <ExcelLogo className="w-7 h-7" /> },
+  { id: 'ppt', name: 'Microsoft PowerPoint', icon: <PowerPointLogo className="w-7 h-7" /> },
 ]
 
 export function SkillsSection() {
@@ -574,7 +566,7 @@ export function SkillsSection() {
               {t('skills.card2.desc')}
             </p>
             <div className="flex flex-wrap gap-2">
-              {['CPOB / GMP', 'Quality Control (QC)', 'In-Process Control (IPC)', 'Batch Record & QA', 'Sediaan Steril & Nonsteril', 'CDOB Distribusi PBF', 'Penyimpanan FEFO', 'Cold Chain Management', 'Stock Opname Fisik', 'Pengadaan e-Katalog', 'SIPNAP & SIMONA', 'Safety & K3 Awareness'].map(badge => (
+              {['Penyimpanan FEFO', 'Manajemen Inventori', 'Stock Opname', 'Pengadaan e-Katalog', 'Logistik Perbekalan Farmasi', 'Verifikasi Penerimaan PBF', 'SIPNAP & SIMONA', 'Sediaan Steril & Nonsteril', 'Alur QC & QA Industri', 'Safety & K3 Awareness'].map(badge => (
                 <span key={badge} className="px-3 py-1.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] text-[10px] font-medium text-[var(--muted)] whitespace-nowrap">
                   {badge}
                 </span>
@@ -942,7 +934,7 @@ export function AboutSection() {
           <div className="group p-5 sm:p-6 rounded-3xl bg-[var(--card-bg)]/40 hover:bg-[var(--card-bg)] border border-[var(--card-border)]/50 hover:border-emerald-500/40 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer">
             <div>
               <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[var(--foreground)] mb-2 font-sans group-hover:text-emerald-500 transition-colors duration-300">
-                <AnimatedCounter end={4.0} decimals={2} suffix="" duration={1600} />
+                <AnimatedCounter end={3.96} decimals={2} suffix="" duration={1600} />
               </div>
               <span className="text-xs sm:text-sm font-bold tracking-wider uppercase text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors block">
                 {t('metric.ipk')}
@@ -957,7 +949,7 @@ export function AboutSection() {
           <div className="group p-5 sm:p-6 rounded-3xl bg-[var(--card-bg)]/40 hover:bg-[var(--card-bg)] border border-[var(--card-border)]/50 hover:border-emerald-500/40 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer">
             <div>
               <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[var(--foreground)] mb-2 font-sans group-hover:text-emerald-500 transition-colors duration-300">
-                <AnimatedCounter end={3.94} decimals={2} suffix="" duration={1400} />
+                <AnimatedCounter end={3.67} decimals={2} suffix="" duration={1400} />
               </div>
               <span className="text-xs sm:text-sm font-bold tracking-wider uppercase text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors block">
                 {t('metric.medal')}
@@ -972,7 +964,7 @@ export function AboutSection() {
           <div className="group p-5 sm:p-6 rounded-3xl bg-[var(--card-bg)]/40 hover:bg-[var(--card-bg)] border border-[var(--card-border)]/50 hover:border-emerald-500/40 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer">
             <div>
               <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[var(--foreground)] mb-2 font-sans group-hover:text-emerald-500 transition-colors duration-300">
-                <AnimatedCounter end={6} decimals={0} suffix="+" duration={1500} />
+                <AnimatedCounter end={5} decimals={0} suffix="" duration={1500} />
               </div>
               <span className="text-xs sm:text-sm font-bold tracking-wider uppercase text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors block">
                 {t('metric.org')}
@@ -987,7 +979,7 @@ export function AboutSection() {
           <div className="group p-5 sm:p-6 rounded-3xl bg-[var(--card-bg)]/40 hover:bg-[var(--card-bg)] border border-[var(--card-border)]/50 hover:border-emerald-500/40 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer">
             <div>
               <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[var(--foreground)] mb-2 font-sans group-hover:text-emerald-500 transition-colors duration-300">
-                <AnimatedCounter end={3} decimals={0} suffix="" duration={1800} />
+                <AnimatedCounter end={2} decimals={0} suffix="" duration={1800} />
               </div>
               <span className="text-xs sm:text-sm font-bold tracking-wider uppercase text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors block">
                 {t('metric.toefl')}
@@ -1201,19 +1193,21 @@ export function AwardsSection() {
       id: 1,
       title: t('award.1.title'),
       issuer: t('award.1.issuer'),
-      year: '2026',
+      year: '',
       category: t('award.1.cat'),
       description: t('award.1.desc'),
-      image: '/projects/sertifikat-kompetensi.png',
+      image: '/projects/sumpah-apoteker.jpg',
+      document: '',
     },
     {
       id: 2,
       title: t('award.2.title'),
       issuer: t('award.2.issuer'),
-      year: '2026',
+      year: '',
       category: t('award.2.cat'),
       description: t('award.2.desc'),
-      image: '/projects/sertifikat-kompetensi.png',
+      image: '/projects/sumpah-apoteker-2.jpg',
+      document: '',
     },
     {
       id: 3,
@@ -1223,6 +1217,7 @@ export function AwardsSection() {
       category: t('award.3.cat'),
       description: t('award.3.desc'),
       image: '/projects/sertifikat-k3.jpg',
+      document: '/projects/sertifikat-k3.jpg',
     },
     {
       id: 4,
@@ -1232,8 +1227,10 @@ export function AwardsSection() {
       category: t('award.4.cat'),
       description: t('award.4.desc'),
       image: '/projects/sertifikat-bencana.jpg',
+      document: '/projects/sertifikat-bencana.jpg',
     },
   ]
+  const activeAward = certificationsList[activeAwardIndex]
 
   const getCardStyle = (offset: number) => {
     if (offset === 0) {
@@ -1315,19 +1312,21 @@ export function AwardsSection() {
               {t('awards.sub')}
             </p>
           </div>
-          <a
-            href={certificationsList[activeAwardIndex].image}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--foreground)] text-[var(--background)] text-sm font-medium hover:opacity-90 transition-colors shrink-0"
-          >
-            {t('awards.openDoc')}
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-              <polyline points="15 3 21 3 21 9" />
-              <line x1="10" y1="14" x2="21" y2="3" />
-            </svg>
-          </a>
+          {activeAward.document && (
+            <a
+              href={activeAward.document}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--foreground)] text-[var(--background)] text-sm font-medium hover:opacity-90 transition-colors shrink-0"
+            >
+              {t('awards.openDoc')}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          )}
         </div>
 
         {/* 3D Cover Flow Carousel - Lurus Sempurna Tanpa Miring, Jarak Rapat */}
@@ -1374,25 +1373,27 @@ export function AwardsSection() {
         {/* Active certificate info - Berjarak Pas & Rapat di Bawah Foto */}
         <div className="text-center mt-3 sm:mt-4 max-w-3xl mx-auto px-4 font-sans">
           <p className="text-[11px] font-sans tracking-widest uppercase text-emerald-500 font-semibold mb-1.5">
-            {certificationsList[activeAwardIndex].category} • {certificationsList[activeAwardIndex].year}
+            {activeAward.category}{activeAward.year && ` • ${activeAward.year}`}
           </p>
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 font-sans text-[var(--foreground)]">
-            {certificationsList[activeAwardIndex].title}
+            {activeAward.title}
           </h3>
           <p className="text-xs md:text-sm font-semibold text-[var(--muted)] mb-2 font-sans">
-            {t('awards.issuer')}: {certificationsList[activeAwardIndex].issuer}
+            {t('awards.issuer')}: {activeAward.issuer}
           </p>
           <p className="text-[var(--muted)] text-sm md:text-base leading-relaxed mb-4 max-w-2xl mx-auto font-sans">
-            {certificationsList[activeAwardIndex].description}
+            {activeAward.description}
           </p>
-          <a
-            href={certificationsList[activeAwardIndex].image}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold underline underline-offset-4 hover:opacity-75 transition-opacity font-sans text-[var(--foreground)]"
-          >
-            {t('awards.viewOriginal')}
-          </a>
+          {activeAward.document && (
+            <a
+              href={activeAward.document}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold underline underline-offset-4 hover:opacity-75 transition-opacity font-sans text-[var(--foreground)]"
+            >
+              {t('awards.viewOriginal')}
+            </a>
+          )}
         </div>
       </div>
     </section>
@@ -1418,7 +1419,7 @@ export function TrainingsSection() {
       location: t('org.1.loc'),
       period: t('org.1.period'),
       description: t('org.1.desc'),
-      tags: ['Fitokimia', 'Ekstraksi Bahan Alam', 'KLT Senyawa Bioaktif', 'Laboratorium Riset'],
+      tags: ['Penelitian Skripsi', 'Dana Hibah', 'Bahan Alam', 'Laboratorium'],
       type: 'event',
     },
     {
@@ -1746,19 +1747,19 @@ export function PersonalSkillsSection() {
       name: 'Microsoft Word',
       Icon: WordLogo,
       color: 'border-blue-500/20 bg-blue-500/10',
-      description: 'Penyusunan Standard Operating Procedure (SOP), dokumentasi rekonsiliasi obat, resume skrining klinis, dan administrasi pelaporan perbekalan farmasi.',
+      description: 'Penyusunan laporan, dokumen administrasi, dan dokumentasi kegiatan praktik kefarmasian.',
     },
     {
       name: 'Microsoft Excel',
       Icon: ExcelLogo,
       color: 'border-emerald-500/20 bg-emerald-500/10',
-      description: 'Pengolahan data inventori obat, monitoring stok opname, rekapitulasi data resep rawat inap/jalan, dan kalkulasi statistik pelaporan.',
+      description: 'Pengolahan dan rekapitulasi data dalam bentuk tabel untuk mendukung administrasi dan pelaporan.',
     },
     {
       name: 'Microsoft PowerPoint',
       Icon: PowerPointLogo,
       color: 'border-orange-500/20 bg-orange-500/10',
-      description: 'Penyusunan materi presentasi kasus klinis, edukasi penggunaan obat kepada pasien dan tenaga kesehatan, serta pelaporan berkala kefarmasian.',
+      description: 'Penyusunan materi presentasi untuk seminar, laporan praktik, dan kegiatan akademik.',
     },
   ]
 

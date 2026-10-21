@@ -4,7 +4,6 @@ import { siteData } from '@/lib/data'
 
 const techColors: Record<string, string> = {
   'Skrining Resep': 'bg-emerald-600',
-  'Interaksi Obat': 'bg-blue-600',
   'Kesesuaian Dosis': 'bg-indigo-600',
   'BPJS & Non-BPJS': 'bg-teal-600',
   'Unit Daily Dose': 'bg-green-700',
@@ -13,42 +12,40 @@ const techColors: Record<string, string> = {
   'Patient Safety': 'bg-rose-600',
   PIO: 'bg-amber-600',
   'Konseling Pasien': 'bg-purple-600',
-  'Insulin Pen': 'bg-violet-600',
+  Insulin: 'bg-violet-600',
   Suppositoria: 'bg-fuchsia-600',
-  'Visite Bangsal': 'bg-sky-600',
+  Visite: 'bg-sky-600',
   CPPT: 'bg-emerald-700',
-  'Rekonsiliasi Obat': 'bg-blue-600',
   'Kolaborasi Interprofesional': 'bg-indigo-700',
+  PTO: 'bg-emerald-600',
+  MESO: 'bg-pink-600',
+  EPO: 'bg-amber-700',
+  Peracikan: 'bg-teal-700',
+  Kapsul: 'bg-cyan-700',
+  Puyer: 'bg-blue-600',
+  Salep: 'bg-violet-700',
   Sitostatika: 'bg-red-600',
-  Kemoterapi: 'bg-rose-700',
-  'Biosafety Cabinet': 'bg-purple-700',
-  Sterilisasi: 'bg-teal-700',
+  IBS: 'bg-rose-700',
+  'e-Katalog': 'bg-sky-700',
   'Verifikasi PBF': 'bg-amber-700',
+  'Faktur & SP': 'bg-orange-600',
   'Prinsip FEFO': 'bg-green-600',
-  'Rantai Dingin': 'bg-cyan-700',
-  Penyimpanan: 'bg-orange-600',
+  'Stock Opname': 'bg-orange-700',
   SIPNAP: 'bg-rose-600',
   SIMONA: 'bg-blue-600',
-  'Kemenkes RI': 'bg-sky-700',
-  'Kepatuhan Regulasi': 'bg-emerald-600',
-  'CPOB / GMP': 'bg-purple-600',
   'Sediaan Steril': 'bg-cyan-600',
   'Sediaan Nonsteril': 'bg-blue-600',
-  'HVAC & Cleanroom': 'bg-teal-600',
-  'Batch Record': 'bg-indigo-600',
-  IPC: 'bg-emerald-600',
+  'QC & QA': 'bg-purple-600',
   'Penjadwalan Produksi': 'bg-amber-600',
-  'QA Release': 'bg-purple-600',
-  CDOB: 'bg-blue-700',
+  'Verifikasi Pesanan': 'bg-indigo-600',
   'Stock Opname Gudang': 'bg-orange-700',
   'Manajemen Faktur': 'bg-emerald-700',
-  Distribusi: 'bg-sky-600',
-  Fitokimia: 'bg-green-600',
-  'Ekstraksi Bahan Alam': 'bg-emerald-600',
-  Kromatografi: 'bg-teal-600',
-  'Laboratorium Riset': 'bg-cyan-600',
+  Penelitian: 'bg-teal-600',
+  Laboratorium: 'bg-cyan-600',
+  'Dana Hibah': 'bg-amber-600',
   'Asisten Dosen': 'bg-amber-600',
   Farmakognosi: 'bg-green-700',
+  Fitokimia: 'bg-green-600',
   'Bimbingan Mahasiswa': 'bg-purple-600',
 }
 
@@ -60,9 +57,9 @@ export default function ProjectList() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
           <p className="text-xs tracking-[0.3em] uppercase text-[var(--muted)] mb-3">PORTOFOLIO KEFARMASIAN & PENGALAMAN</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-3">Pengalaman Klinis, Industri, Distribusi & Riset</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-3">Pengalaman Praktik Kefarmasian</h2>
           <p className="text-[var(--muted)] text-sm max-w-lg">
-            Dokumentasi rekam jejak praktik farmasi klinis rumah sakit RSUD Undata, apotek Kimia Farma, industri manufaktur CPOB PT Prima Medika, distribusi CDOB PT Sehat Mitra Sejati, dan penelitian skripsi bahan alam Universitas Tadulako.
+            Rincian kegiatan praktik di RSUD Undata Palu, Apotek Kimia Farma Unit Bisnis Palu, PT Prima Medika Laboratory, PBF PT Sehat Mitra Sejati, serta kegiatan akademik di Universitas Tadulako.
           </p>
         </div>
 

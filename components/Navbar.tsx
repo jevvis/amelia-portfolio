@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import ThemeToggle from './ThemeToggle'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -14,33 +14,11 @@ const mainLinkKeys = [
   { key: 'nav.skills', id: 'skills', href: '/#skills' },
 ]
 
-const projectLinks = [
-  { label: 'TECHNICAL', href: '#technical' },
-  { label: 'DIGITAL', href: '#digital' },
-]
-
 export default function Navbar() {
   const { t, lang, setLang } = useLanguage()
   const pathname = usePathname()
   const isProjectSection = pathname?.startsWith('/projects')
-  const [activeProjectTab, setActiveProjectTab] = useState('technical')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    if (!isProjectSection) return
-
-    const handleScroll = () => {
-      const digitalEl = document.getElementById('digital')
-      if (digitalEl && window.scrollY >= digitalEl.offsetTop - 100) {
-        setActiveProjectTab('digital')
-      } else {
-        setActiveProjectTab('technical')
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [isProjectSection])
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (isProjectSection) return
@@ -59,9 +37,7 @@ export default function Navbar() {
     }
   }
 
-  const currentLinks = isProjectSection
-    ? projectLinks.map(l => ({ label: l.label, href: l.href }))
-    : mainLinkKeys.map(l => ({ label: t(l.key), href: l.href, id: l.id }))
+  const currentLinks = mainLinkKeys.map(l => ({ label: t(l.key), href: l.href, id: l.id }))
 
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[96%] max-w-6xl">
@@ -90,18 +66,8 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              onClick={(e) => {
-                if (isProjectSection) {
-                  setActiveProjectTab(link.label.toLowerCase())
-                } else {
-                  handleNavClick(e, link.href)
-                }
-              }}
-              className={`whitespace-nowrap text-[10.5px] xl:text-[11.5px] tracking-wider font-semibold px-2 py-1 rounded-full transition-all hover:text-[var(--foreground)] ${
-                isProjectSection && link.label.toLowerCase() === activeProjectTab
-                  ? 'text-[var(--foreground)] bg-[var(--foreground)]/10'
-                  : 'text-[var(--muted)] hover:bg-[var(--foreground)]/5'
-              }`}
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="whitespace-nowrap text-[10.5px] xl:text-[11.5px] tracking-wider font-semibold px-2 py-1 rounded-full transition-all hover:text-[var(--foreground)] text-[var(--muted)] hover:bg-[var(--foreground)]/5"
             >
               {link.label}
             </a>
